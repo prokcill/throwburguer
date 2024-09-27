@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="perfil-styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/imperf.png" alt="Imagem de Cabeçalho">
+    </header>
+    <div class="container">
+        <div id="profile-page" class="profile-container">
+            <h1>Perfil do Usuário</h1>
+            <button onclick="logout()">Sair</button>
+            <a href="inicio.html"><button>Voltar à página inicial</button></a>
+
+            <div class="profile-details">
+                <div class="profile-item">
+                    <h2>Foto de Perfil</h2>
+                    <img id="user-photo" alt="Foto de Perfil" class="profile-photo">
+                </div>
+                <div class="profile-item">
+                    <h2>Nome</h2>
+                    <p id="user-name"><?php echo htmlspecialchars($user['nome']); ?></p>
+                </div>
+                <div class="profile-item">
+                    <h2>Endereço</h2>
+                    <p id="user-address"><?php echo htmlspecialchars($user['endereco']); ?></p>
+                </div>
+                <div class="profile-item">
+                    <h2>Cidade</h2>
+                    <p id="user-city"><?php echo htmlspecialchars($user['cidade']); ?></p>
+                </div>
+                <div class="profile-item">
+                    <h2>Telefone</h2>
+                    <p id="user-phone"><?php echo htmlspecialchars($user['telefone']); ?></p>
+                </div>
+                <div class="profile-item">
+                    <h2>Email</h2>
+                    <p id="user-email"><?php echo htmlspecialchars($user['email']); ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Throw Burger Company. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

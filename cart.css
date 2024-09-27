@@ -1,0 +1,85 @@
+/* cart.css */
+
+/* Estiliza o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estiliza o cabeçalho */
+header {
+    background-color: #e51701; /* Faixa vermelha */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Estiliza a área de itens do carrinho */
+.cart-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espaçamento entre as colunas e linhas */
+    margin: 20px;
+}
+
+/* Estiliza cada item do carrinho */
+.cart-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estiliza o botão de remover */
+.remove-button {
+    background-color: #d71701;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #c0392b;
+}
+
+/* Estiliza a frase 'Itens no Carrinho' */
+main h2 {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px;
+}
+
+/* Estiliza o total do carrinho e o botão de finalizar compra */
+#cart-total {
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right; /* Alinha o texto à direita */
+}
+
+#checkout-button {
+    background-color: #457B9D; /* Cor de fundo */
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transição para o efeito de aumento */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    display: block;
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+}
+
+#checkout-button:hover {
+    transform: scale(2.05); /* Efeito de aumento ao passar o mouse */
+}

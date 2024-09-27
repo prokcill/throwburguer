@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="perfil-styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/perft.png" alt="Imagem de Cabeçalho">
+    </header>
+    <div class="container">
+        <div id="login-form" class="form-container">
+            <h1>Login</h1>
+            <form>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                
+                <label for="login-password">Senha:</label>
+                <input type="password" id="login-password" required>
+                
+                <button type="button" onclick="loginUser()">Login</button>
+            </form>
+            <p><a href="#" onclick="showForgotPassword()">Esqueci minha senha</a></p>
+            <div id="forgot-password" style="display: none;">
+                <h2>Recuperação de Senha</h2>
+                <label for="forgot-email">Email:</label>
+                <input type="email" id="forgot-email" required>
+                <button type="button" onclick="resetPassword()">Enviar Link de Redefinição</button>
+            </div>
+            <p>Ainda não tem uma conta? <a href="register.html">Cadastre-se aqui</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

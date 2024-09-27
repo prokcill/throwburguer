@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalização de Pagamento</title>
+    <link rel="stylesheet" href="espera-styles.css"> <!-- Estilos Globais -->
+    <link rel="stylesheet" href="checkout-styles.css"> <!-- Estilos Específicos para Finalização de Pagamento -->
+</head>
+<body>
+    <header>
+        <h1>Finalização de Pagamento</h1>
+        <a href="ham.html">Voltar ao Cardápio</a>
+    </header>
+    <main>
+        <h2>Resumo do Pedido</h2>
+        <div id="order-summary">
+            <p><strong>Total: R$ <span id="total-price"></span></strong></p>
+            <label for="coupon-code">Cupom de Desconto:</label>
+            <input type="text" id="coupon-code" placeholder="Insira o código do cupom">
+            <button id="apply-coupon-button">Aplicar Cupom</button>
+            <p id="discount-message"></p>
+            <p><strong>Total com Desconto: R$ <span id="discounted-price"></span></strong></p>
+        </div>
+
+        <h3>Informações de Entrega</h3>
+        <form id="checkout-form">
+            <div>
+                <label for="recipient-name">Nome do Destinatário:</label>
+                <input type="text" id="recipient-name" required>
+                
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" required>
+                
+                <label for="number">Número:</label>
+                <input type="text" id="number" required>
+                
+                <label for="apartment">Apartamento (opcional):</label>
+                <input type="text" id="apartment">
+                
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" placeholder="Digite seu CEP" required>
+            </div>
+            <p id="shipping-cost">Frete: R$ 29,90</p>
+
+            <h3>Escolha a Forma de Pagamento</h3>
+            <div>
+                <label>
+                    <input type="radio" name="payment-method" value="credit-card"> Cartão de Crédito
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="debit-card"> Cartão de Débito
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="pix"> Pix
+                </label>
+            </div>
+
+            <div id="credit-card-info" class="payment-info">
+                <h4>Cartão de Crédito</h4>
+                <label for="credit-card-name">Nome no Cartão:</label>
+                <input type="text" id="credit-card-name">
+                
+                <label for="credit-card-number">Número do Cartão:</label>
+                <input type="text" id="credit-card-number">
+                
+                <label for="credit-card-cvc">Código de Segurança:</label>
+                <input type="text" id="credit-card-cvc">
+                
+                <label for="credit-card-expiry">Data de Validade:</label>
+                <input type="text" id="credit-card-expiry">
+                
+                <label for="installments">Parcelar em até:</label>
+                <select id="installments">
+                    <option value="1">1x</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                </select>
+                <p id="installments-message"></p>
+            </div>
+
+            <div id="debit-card-info" class="payment-info">
+                <h4>Cartão de Débito</h4>
+                <label for="debit-card-name">Nome no Cartão:</label>
+                <input type="text" id="debit-card-name">
+                
+                <label for="debit-card-number">Número do Cartão:</label>
+                <input type="text" id="debit-card-number">
+                
+                <label for="debit-card-cvc">Código de Segurança:</label>
+                <input type="text" id="debit-card-cvc">
+                
+                <label for="debit-card-expiry">Data de Validade:</label>
+                <input type="text" id="debit-card-expiry">
+            </div>
+
+            <div id="pix-info" class="payment-info">
+                <h4>Pix</h4>
+                <img src="img/1722376209757.jpg" alt="QR Code para pagamento via Pix">
+            </div>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </main>
+    <script src="checkout.js"></script>
+</body>
+</html>

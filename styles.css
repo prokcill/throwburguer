@@ -1,0 +1,174 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #1D3557;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #1D3557;
+    color: white;
+    padding: 20px 5%; /* Ajuste para usar percentual */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre logo, nav e ícone de perfil */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
+}
+
+.logo {
+    flex: 1; /* Faz com que a logo ocupe espaço */
+}
+
+.logo img {
+    height: 100px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 2; /* O nav ocupa mais espaço */
+}
+
+.lushine-button {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.lushine-button:hover {
+    background-color: #ffd700;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+    color: #333;
+}
+
+.profile-container {
+    flex: 1; /* Flexível para se ajustar */
+    display: flex;
+    justify-content: flex-end; /* Alinha o ícone de perfil à direita */
+}
+
+.profile-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos novos banners rotativos maiores */
+.additional-banners {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Ajustado para ocupar 70% da altura da janela */
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.additional-banner-images {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.additional-banner-images img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%; /* Ajuste automático de altura */
+    object-fit: cover;
+}
+
+.additional-banner-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.additional-banner-nav button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.additional-banner-nav button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.nbanner img {
+    width: 100%; /* Ajusta a largura da imagem para ocupar toda a tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+footer {
+    background-color: #1E2A38;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Ajusta a direção em telas menores */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Centraliza os botões na coluna */
+        margin-top: 10px; /* Espaçamento em cima */
+    }
+
+    .logo img {
+        height: 80px; /* Ajusta o tamanho da logo em telas menores */
+    }
+
+    .additional-banners {
+        height: 50vh; /* Altura reduzida em telas menores, mas ainda grande */
+    }
+
+    .profile-container {
+        margin-top: 10px; /* Espaçamento em cima */
+    }
+}
+.single-banner {
+    width: 100%;
+    height: 70vh; /* Mantém a altura igual ao banner anterior */
+    overflow: hidden;
+    margin: 0; /* Remove qualquer margem */
+}
+
+.single-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre o espaço mantendo a proporção */
+}
+

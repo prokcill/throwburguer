@@ -1,0 +1,139 @@
+/* Estilos exclusivos para a página de Acompanhamento de Pedido */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    overflow-y: scroll; /* Permite rolagem vertical */
+    scrollbar-width: thin; /* Para navegadores Firefox */
+}
+
+/* Estilo da barra de rolagem para WebKit (Chrome, Safari) */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ddd; /* Cor do fundo da barra */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #d32f2f; /* Cor da barra */
+    border-radius: 10px;
+}
+
+header {
+    background-color: #d32f2f; /* Vermelho moderno */
+    padding: 15px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #b71c1c; /* Vermelho escuro */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header a:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Ajusta a altura principal considerando o header */
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#status {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    position: relative;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #d32f2f;
+    width: 0%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 5s ease-in-out;
+}
+
+#progress-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#progress-bar.finished {
+    background-color: #4caf50; /* Verde para quando a entrega chegar */
+}
+
+#progress-text.finished {
+    color: #4caf50;
+    content: "Sua entrega chegou!";
+}
+
+.footer-note {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Adicionando uma animação ao status */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#status {
+    animation: pulse 2s infinite;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recompensas</title>
+    <link rel="stylesheet" href="espera-styles.css"> <!-- Estilos Globais -->
+    <link rel="stylesheet" href="rewards-styles.css"> <!-- Estilos Específicos para Recompensas -->
+</head>
+<body>
+    <header>
+        <h1>Recompensas</h1>
+        <a href="inicio.html" class="back-link">Voltar ao Início</a>
+    </header>
+    <main>
+        <section class="congratulations-section">
+            <h2>Parabéns!</h2>
+            <p>Você ganhou <span id="points-earned" class="highlight-text"></span> pontos nesta compra.</p>
+            <p>Você possui um total de <span id="total-points" class="highlight-text"></span> pontos acumulados.</p>
+        </section>
+        <section class="coupons-section">
+            <h3>Troque seus pontos por cupons de desconto:</h3>
+            <ul>
+                <li>50 pontos: Cupom de 5% de desconto</li>
+                <li>100 pontos: Cupom de 10% de desconto</li>
+                <li>200 pontos: Cupom de 20% de desconto</li>
+            </ul>
+            <p>Selecione um cupom abaixo:</p>
+            <select id="coupon-selection" class="coupon-select">
+                <option value="5%">5% de desconto (50 pontos)</option>
+                <option value="10%">10% de desconto (100 pontos)</option>
+                <option value="20%">20% de desconto (200 pontos)</option>
+            </select>
+            <button id="redeem-button" class="shine-button">Resgatar Cupom</button>
+            <a href="track-order.html"><button id="track-order-button" class="oshine-button">Acompanhar Pedido</button></a>
+        </section>
+    </main>
+    <script src="rewards.js"></script>
+</body>
+</html>
